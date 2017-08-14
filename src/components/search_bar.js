@@ -22,9 +22,14 @@ class SearchBar extends Component {
 
     render() {
         //onChange is a react property
-        return <input
+        return (
+            <div>
+                <input
                 // onChange={this.onInputChange}
-                onChange={event => console.log(event.target.value)} />;
+                //this.setState is to change the state that we initialize
+                onChange={ event => this.setState({ term: event.target.value }) } />
+            </div>
+        );
     }
 
     // onInputChange(event){
