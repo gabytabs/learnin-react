@@ -1,6 +1,11 @@
 import React from 'react';
 
 const VideoDetail = ({video}) => {
+    // Loader for the Parent component to fetch API
+    if (!video) {
+        return <div> Loading.. </div>;
+    };
+
     let videoId = video.id.videoId;
     let url = `https://www.youtube.com/embed/${videoId}`; // same as => let url = 'https://www.youtube.com/embed/' + videoId;
 
